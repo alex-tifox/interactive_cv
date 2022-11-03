@@ -1,16 +1,10 @@
-# interactive_cv
+# Interactive CV
 
-Project of my interactive web CV
+Project of my interactive web CV made with Flutter and hosted on Firebase
 
-## Getting Started
+### Plans
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Move my CV to this application and visit-card website
+- Adaptive UI
+- Animations for scrolling and different menus showing
+- CI/CD with GitHub Actions
