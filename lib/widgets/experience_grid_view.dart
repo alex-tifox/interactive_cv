@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_cv/models/career_model.dart';
-import 'package:interactive_cv/widgets/career_card.dart';
+import 'package:interactive_cv/models/experience_model.dart';
+import 'package:interactive_cv/widgets/experience_card.dart';
 
 class ExperienceGridView extends StatelessWidget {
-  final List<CareerModel> workExperience;
+  final List<ExperienceModel> workExperience;
   const ExperienceGridView({required this.workExperience, super.key});
 
   @override
@@ -14,8 +14,18 @@ class ExperienceGridView extends StatelessWidget {
         childAspectRatio: 16 / 9,
       ),
       itemBuilder: (_, index) {
-        final career = workExperience[index];
-        return CareerCard(career: career);
+        final experience = workExperience[index];
+        return experience.when(
+          careerModel: (company, position, time, description) => ExperienceCard(
+            place: company,
+            description: description,
+          ),
+          educationModel: (institution, position, time, description) =>
+              ExperienceCard(
+            place: institution,
+            description: description,
+          ),
+        );
       },
       itemCount: workExperience.length,
     );
